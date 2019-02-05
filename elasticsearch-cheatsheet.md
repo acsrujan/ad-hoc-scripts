@@ -1,4 +1,5 @@
-### Elasticsearch quick reference API commands, to be run in client, for health checks, maintenance, etc.
+### Elasticsearch v1.7 quick reference API commands, to be run in client, for health checks, maintenance, etc.
+
 
 1. Quick health check
 `curl -XGET client.elasticsearch.vpc:9200/_cat/health?v`
