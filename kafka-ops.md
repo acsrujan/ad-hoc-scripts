@@ -13,4 +13,3 @@ To describe all topics, replace `--topic sample_topic` by `all`
 3. Change retention period for a topic:
 `bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name sample_topic --add-config retention.ms=86400000`
 
-4. 
