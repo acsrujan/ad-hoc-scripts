@@ -1,9 +1,12 @@
-on: [pull_request]
-
+on:
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
-      - name: Get branch name (pull request)
-        if: github.event_name == 'pull_request'
-        shell: bash
-        run: if ${GITHUB_REF_NAME} != "refs/heads/develop"; then echo " You raised from ${GITHUB_REF_NAME} Please raise from develop branch instead" exit 1; fi 
+    steps:
+    - name: get_job
+      if: github.event_name == 'pull_request'
+      shell: bash
+      run: if ${GITHUB_REF_NAME} != "refs/heads/develop"; then echo " You raised from ${GITHUB_REF_NAME} Please raise from develop branch instead" exit 1; fi 
